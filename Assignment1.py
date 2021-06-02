@@ -21,6 +21,7 @@ def routes():
                     print("sourceNode: " + str(sourceNode))
                     print("destNode: " + str(destNode))
                     print(f"distance between {sourceNode} and {destNode} is : " + str(distance))
+                    print(f"The number of stops for the route(A,D,C) is {routestops}")
                     sourceNode = route[routestops]
                     if routestops < 2:
                         destNode = route[routestops + 1]
