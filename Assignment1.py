@@ -1,3 +1,7 @@
+def main():
+    routes()
+
+
 def routes():
     # add edges as list with weight
     edges = [['A', 'B', 5], ['B', 'C', 4], ['C', 'D', 8], ['D', 'C', 8], ['D', 'E', 6], ['A', 'D', 5], ['C', 'E', 2],
@@ -22,3 +26,6 @@ def routes():
                         destNode = route[routestops + 1]
                     if destNode is route[len(route) - 1]:
                         break
+
+
+main()
