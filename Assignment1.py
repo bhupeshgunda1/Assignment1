@@ -7,3 +7,18 @@ def routes():
     routestops = 0  # initialize number of stops to 0
     sourceNode = route[routestops]
     destNode = route[routestops + 1]
+    # Code to find the distance between the nodes
+    for i in edges:
+        for edge in edges:
+            if edge[0] is sourceNode:
+                if edge[1] is destNode:
+                    distance = distance + edge[2]
+                    routestops = routestops + 1
+                    print("sourceNode: " + str(sourceNode))
+                    print("destNode: " + str(destNode))
+                    print(f"distance between {sourceNode} and {destNode} is : " + str(distance))
+                    sourceNode = route[routestops]
+                    if routestops < 2:
+                        destNode = route[routestops + 1]
+                    if destNode is route[len(route) - 1]:
+                        break
